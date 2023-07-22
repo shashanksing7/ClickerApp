@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "271675493871",
+    "project_id": "trialclickerapp",
+    "storage_bucket": "trialclickerapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:271675493871:android:7409f8ae12f251a4e4ba1a",
+        "android_client_info": {
+          "package_name": "com.clickgame.haha888.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "271675493871-j4hadpf5v4qd1tbij9c62c625vhpv9ln.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALpYIBN9OJ7ckwus_tQakl5nXN8LFJKtk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "271675493871-j4hadpf5v4qd1tbij9c62c625vhpv9ln.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultaMap xmlns:android="http://schemas.android.com/apk/res/android">
+<entry>
+    <key>text1</key>
+    <value>ABC</value>
+</entry>
+</defaultaMap>
