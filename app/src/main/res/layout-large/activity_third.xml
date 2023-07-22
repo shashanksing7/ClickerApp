@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ThirdActivity"
+    android:background="@color/black"
+    android:screenOrientation="portrait">
+
+    <TextView
+        android:id="@+id/Highscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:text="HighScore"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.222" />
+
+    <TextView
+        android:id="@+id/currentscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:alpha="1"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="55dp"
+        app:layout_constraintEnd_toEndOf="@+id/Highscore"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="@+id/Highscore"
+        app:layout_constraintTop_toBottomOf="@+id/Highscore" />
+
+    <TextView
+        android:id="@+id/AVerageCSP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:alpha="0.5"
+        android:text="Average CPS:"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/currentscore"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/currentscore"
+        app:layout_constraintTop_toBottomOf="@+id/currentscore" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="35dp"
+        android:weightSum="5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AVerageCSP"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:id="@+id/star1"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_24" />
+
+        <ImageView
+            android:id="@+id/star2"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_24" />
+
+        <ImageView
+            android:id="@+id/star3"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_star_24" />
+
+        <ImageView
+            android:id="@+id/star4"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+
+            android:src="@drawable/baseline_star_24" />
+
+        <ImageView
+            android:id="@+id/star5"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:scaleType="fitXY"
+            android:src="@drawable/baseline_star_24" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.5"
+        android:text="Pro"
+        android:textColor="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout"
+        app:layout_constraintVertical_bias="0.145" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/facebookbutton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/facebooksvg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/message"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/twitterbutton"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:background="@drawable/twittericonsvg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/message"
+        app:layout_constraintTop_toBottomOf="@+id/message" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

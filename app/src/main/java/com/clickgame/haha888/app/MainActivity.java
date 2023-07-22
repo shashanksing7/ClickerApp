@@ -157,33 +157,34 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
 
-        /*
+    /*
         Checking if the user is visiting the app first time if yes,then perform regular navigation.
          */
+    private void muchcontrol(){
 
-            if(CheckVisitNumber()){
+        if(CheckVisitNumber()){
                 /*
                 Because FirebaseRemote Config is runnig ascncronously,chances are high that even during frist start of the
                 App after installation the user will be taekn directly to third activity that ,to avoid this we call handler method
                 and pass intent to startactivity() here,we're not using the implemenations() method;
                  */
-                new Handler().postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                        startActivity(intent);
-                        finish();
-                    }
-                },1500);
-            }
-            else if (sharedPreferences.getBoolean(RatedOrNot,false)==false&&sharedPreferences.getInt(VisitNumber,1)>1){
-                dialog.show();
-            }
-            else {
-                implementconditions();
-            }
-
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            },1500);
+        }
+        else if (sharedPreferences.getBoolean(RatedOrNot,false)==false&&sharedPreferences.getInt(VisitNumber,1)>1){
+            dialog.show();
+        }
+        else {
+            implementconditions();
+        }
     }
 
     /*
@@ -249,6 +250,7 @@ public class MainActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<Boolean> task) {
                 if(task.isSuccessful()){
                     text1=firebaseRemoteConfig.getString("text1");
+                    muchcontrol();
                     Log.d(TAG, "onComplete: fetched;"+text1);
                 }
             }
